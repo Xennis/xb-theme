@@ -7,7 +7,12 @@
 	}
 	
 	.title {
-		padding-top: 110px;
+		/* Mobile */
+		padding-top: 55px;
+		/* Larger than tablet */
+		@media (min-width: 750px) {
+			padding-top: 110px;
+		}
 		text-align: center;
 	}
 	
