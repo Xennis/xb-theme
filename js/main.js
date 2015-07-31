@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var resizeBackground = function() {
-		var height = fullscreenBackground('#home img', {
+		var height = fullscreenBackground('.scaleImage', {
 			width: 2048,
 			height: 1018
 		});
@@ -22,8 +22,11 @@ $(document).ready(function(){
 		height: 60
 	});
 	
-	scrollTo({
-		duration: 1000,
-		offset: 70
-	});	
+	// Use scrollTo only on the home page
+	if (window.location.pathname === '/') {
+		scrollTo({
+			duration: 1000,
+			offset: 70
+		});
+	}
 });
