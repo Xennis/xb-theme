@@ -1,15 +1,21 @@
 $(document).ready(function(){
 
-	fullscreenBackground('#home img', {
-		width: 2048,
-		height: 1018
-	});
-	$(window).on('resize', function(){
-		fullscreenBackground('#home img', {
+	var resizeBackground = function() {
+		var height = fullscreenBackground('#home img', {
 			width: 2048,
 			height: 1018
 		});
+		$('#home').height(height);
+	};
+		
+	$(window).on('resize', function(){
+		resizeBackground();
 	});
+	
+	resizeBackground();
+	//$(window).on('hashchange', function() {
+	//	console.log(window.location.hash)
+	//});
 	
 	animatedNavbar('header nav li a', {
 		duration: 200,

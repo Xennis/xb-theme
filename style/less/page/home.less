@@ -1,5 +1,4 @@
 #home {
-	height: 100%;
 	padding-top: @navbar-height + @navbar-border-height;
 	
 	img {
@@ -10,15 +9,25 @@
 	.title {
 		padding-top: 110px;
 		text-align: center;
-		
-		h1 {
-			display: inline-block;
-			color: @color-main-light;
-			border-top: 1px solid @color-main-light;
-			border-bottom: 1px solid @color-main-light;
-			text-transform: uppercase;
-			font-size: 70px;
-			font-weight: 400;
-		}
-	} 
+	}
+	
+	h1 {
+		display: inline-block;
+		color: @color-main-light;
+		border-top: 1px solid @color-main-light;
+		border-bottom: 1px solid @color-main-light;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+}
+
+/* Mobile */
+#home h1 {
+	font-size: 40px;
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#home h1 {
+		font-size: 70px;
+	}	
 }

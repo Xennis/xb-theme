@@ -10,12 +10,16 @@
  */
 var scrollTo = function(options) {
 	$('a[href^="#"]').on('click', function(event) {
-		var target = $( $(this).attr('href') );
+		var anchor = $(this).attr('href');
+		var target = $(anchor);
 		if (target.length) {
 			event.preventDefault();
 			$('html, body').animate({
 				scrollTop: target.offset().top - options.offset
-			}, options.duration);
+			}, options.duration, function() {
+				// Update the URL
+				window.location.hash = anchor;
+			});
 		}
 	});
 };

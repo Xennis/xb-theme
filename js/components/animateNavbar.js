@@ -9,7 +9,6 @@
 var animatedNavbar = function(element, options) {
 	var element = $(element);
 	var height = '-'+options.height+'px';
-	console.log(height);
 	
 	element.wrapInner('<span class="out"></span>');
 	element.each(function() {
