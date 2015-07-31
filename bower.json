@@ -1,0 +1,11 @@
+{
+  "name": "twotone",
+  "description": "",
+  "dependencies": {
+	"jquery": "~2.1.x"
+  },
+  "devDependencies": {
+  },
+  "resolutions": {
+  }
+}

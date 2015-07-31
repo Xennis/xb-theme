@@ -1,0 +1,51 @@
+@navbar-item-width: 125px;
+
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	border-bottom: @navbar-border-height solid @color-main-light;
+	background: @color-main-dark;
+	color: white;
+  
+	nav {
+		float: right;
+		padding: 0px 10px;
+
+		li {
+			overflow: hidden;
+			line-height: @navbar-height;
+		}
+		
+		a {
+			position: relative;
+			width: @navbar-item-width;
+			height: @navbar-height;
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			color: @color-main-light;
+			
+			span {
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				@navbar-height: 60px;
+				display: block;
+				vertical-align: middle;
+			}
+			
+			.out {
+				top: 0px;
+			}
+			
+			.over {
+				top: -@navbar-height;
+				background: @color-main-light;
+				color: @color-main-dark;
+			}			
+		}
+	}
+}

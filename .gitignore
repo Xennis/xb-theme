@@ -1,0 +1,17 @@
+###########
+# Local and temporary files
+###########
+
+# Compiled
+css/
+
+# Node and Bower directories
+node_modules/
+bower_components/
+
+###########
+# IDE
+###########
+
+# Netbeans
+nbproject/
