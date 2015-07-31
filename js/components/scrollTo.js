@@ -6,6 +6,7 @@
  * 
  * @param {object} options Options
  *		- {number} duration Animation time in milliseconds
+ *		- {number} offset Offset in pixel
  */
 var scrollTo = function(options) {
 	$('a[href^="#"]').on('click', function(event) {
@@ -13,7 +14,7 @@ var scrollTo = function(options) {
 		if (target.length) {
 			event.preventDefault();
 			$('html, body').animate({
-				scrollTop: target.offset().top
+				scrollTop: target.offset().top - options.offset
 			}, options.duration);
 		}
 	});

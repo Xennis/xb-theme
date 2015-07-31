@@ -1,10 +1,15 @@
 @images: '../../images';
+@bower: '../../js/bower_components';
 
 @color-main-dark: black;
 @color-main-light: white;
+@color-main-highlight: #1EAEDB;
 
 @navbar-height: 60px;
 @navbar-border-height: 10px;
+
+@import '@{bower}/skeleton/css/normalize.css';
+@import '@{bower}/skeleton/css/skeleton.css';
 
 @import 'header';
 @import 'footer';
@@ -17,22 +22,22 @@ body {
 	height: 100%;
 }
 
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
 a {
 	text-decoration: none;
 }
 
-ul {
+nav ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 
 	li {
 		float: left;
+		margin: 0px;
 	}
-}
-
-body {
-	padding: 0px;
-	margin: 0px;
-	font-family: 'Raleway', sans-serif;
 }

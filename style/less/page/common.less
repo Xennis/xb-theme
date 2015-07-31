@@ -1,31 +1,61 @@
 @article-max-width: 800px;
+@color-grey: #666666;
+@color-grey-dark: #999999;
 
-p {
-	line-height: 1.4;
-}
-.container {
+.container-articles {
 
 	.light {
 		background: url('@{images}/gplaypattern.png');
-		color: #666666;
+		color: @color-grey;
 	}
 
 	.dark {
 		background: url('@{images}/black_linen_v2.png');
-		color: #999999;
+		color: @color-grey-dark;
 	}
 
 	article {
 		max-width: @article-max-width;
 		margin: auto;
-		padding: 40px 20px;
+		padding: 70px 20px 40px 20px;
 		text-align: justify;
 	}
 
 	h1 {
-		font-size: 50px;
+		text-align: center;
+/*		font-size: 50px;
 		text-align: center;
 		color: #999999;
-		font-weight: normal;
+		font-weight: normal;*/
+	}
+}
+
+#projects {
+	h5 {
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+}
+#about {
+	#social-links {
+		ul {
+			list-style: none;
+
+			li {
+				line-height: 33px;
+				vertical-align: middle;	
+			}
+		}
+		.fa {
+			padding-right: 4px;
+		}
+		a {
+			color: @color-grey-dark;
+		}
+		a:hover {
+			color: @color-main-highlight;
+		}
 	}
 }

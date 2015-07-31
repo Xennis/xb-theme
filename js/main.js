@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-		fullscreenBackground('#home img', {
-			width: 2048,
-			height: 1018
-		});
+	fullscreenBackground('#home img', {
+		width: 2048,
+		height: 1018
+	});
 	$(window).on('resize', function(){
 		fullscreenBackground('#home img', {
 			width: 2048,
@@ -17,6 +17,7 @@ $(document).ready(function(){
 	});
 	
 	scrollTo({
-		duration: 1000
+		duration: 1000,
+		offset: 70
 	});	
 });

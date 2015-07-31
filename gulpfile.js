@@ -44,8 +44,8 @@ gulp.task('serve', ['styles'], function () {
 
 // Watch for changes
 gulp.task('watch', ['serve'], function () {
-    gulp.watch('**/*.html', reload);
-    gulp.watch('**/*.js', reload);
+    gulp.watch('index.html', reload);
+    //gulp.watch('**/*.js', reload);
 	gulp.watch('style/less/**/*.less', ['styles']);
 });
 

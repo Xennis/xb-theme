@@ -18,6 +18,11 @@ header {
 			line-height: @navbar-height;
 		}
 		
+		a,
+		a:hover { // overwrite Skeleton
+			color: @color-main-light;
+		}
+
 		a {
 			position: relative;
 			width: @navbar-item-width;
@@ -26,7 +31,6 @@ header {
 			text-align: center;
 			text-transform: uppercase;
 			font-size: 14px;
-			color: @color-main-light;
 			
 			span {
 				position: absolute;
@@ -45,7 +49,7 @@ header {
 				top: -@navbar-height;
 				background: @color-main-light;
 				color: @color-main-dark;
-			}			
+			}
 		}
 	}
 }

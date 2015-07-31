@@ -2,10 +2,8 @@
   "name": "twotone",
   "description": "",
   "dependencies": {
-	"jquery": "~2.1.x"
+    "jquery": "~2.1.x",
+	"skeleton": "~2.0.x"
   },
-  "devDependencies": {
-  },
-  "resolutions": {
-  }
+  "devDependencies": {}
 }

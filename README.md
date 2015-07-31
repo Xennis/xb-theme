@@ -6,5 +6,9 @@ Patterns
 
 ### Setup
 
+Install requirements
 * `npm install`
+* `bower install`
+
+Run
 * `gulp`
