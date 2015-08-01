@@ -7,10 +7,17 @@ header {
 	background: @color-main-dark;
   
 	nav {
-		@media (min-width: 750px) {
+		height: @navbar-height;
+		text-align: center;
+		padding: 0px 10px;
+
+		@media (min-width: @screen-normal) and (max-width: @screen-large) {
 			float: right;			
 		}
-		padding: 0px 10px;
+
+		ul {
+			display: inline-block;				
+		}
 
 		li {
 			overflow: hidden;
@@ -28,11 +35,12 @@ header {
 			/* Mobile */
 			font-size: 12px;
 			padding: 0px 5px;
+
 			.over {
 				display: none;
 			}
-			/* Larger than tablet */
-			@media (min-width: 750px) {
+
+			@media (min-width: @screen-normal) {
 				position: relative;
 				padding: 0px;
 				display: block;

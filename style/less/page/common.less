@@ -7,10 +7,10 @@
 	}
 	
 	.title {
-		/* Mobile */
-		padding-top: 55px;
-		/* Larger than tablet */
-		@media (min-width: 750px) {
+		@media (max-width: (@screen-normal - 1)) {
+			padding-top: 55px;	
+		}
+		@media (min-width: @screen-normal) {
 			padding-top: 110px;
 		}
 		text-align: center;
@@ -23,10 +23,10 @@
 		border-bottom: 1px solid @color-main-light;
 		text-transform: uppercase;
 		font-weight: 400;
-		/* Mobile */
-		font-size: 40px;
-		/* Larger than tablet */
-		@media (min-width: 750px) {
+		@media (max-width: (@screen-normal - 1)) {
+			font-size: 40px;	
+		}
+		@media (min-width: @screen-normal) {
 			font-size: 70px;
 		}
 	}
