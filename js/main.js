@@ -1,14 +1,14 @@
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
 	var resizeBackground = function() {
 		var height = fullscreenBackground('.scaleImage', {
 			width: 2048,
 			height: 1018
 		});
-		$('#home').height(height);
+		jQuery('#home').height(height);
 	};
 		
-	$(window).on('resize', function(){
+	jQuery(window).on('resize', function(){
 		resizeBackground();
 	});
 	
@@ -17,7 +17,7 @@ $(document).ready(function(){
 	//	console.log(window.location.hash)
 	//});
 	
-	animatedNavbar('header nav li a', {
+	animatedNavbar('header .menu-primary-menu-container li a', {
 		duration: 200,
 		height: 60
 	});

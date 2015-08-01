@@ -19,7 +19,7 @@ var handleError = function (err) {
 
 // Compile styles
 gulp.task('styles', function () {
-    return gulp.src('style/less/onetwo.less')
+    return gulp.src('style/less/main.less')
         .pipe($.less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
             }))

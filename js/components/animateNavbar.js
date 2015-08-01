@@ -7,19 +7,19 @@
  *		- {number} height Height of an element in pixel
  */
 var animatedNavbar = function(element, options) {
-	var element = $(element);
+	var element = jQuery(element);
 	var height = '-'+options.height+'px';
 	
 	element.wrapInner('<span class="out"></span>');
 	element.each(function() {
-		$('<span class="over">' +  $(this).text() + '</span>' ).appendTo(this);
+		jQuery('<span class="over">' + jQuery(this).text() + '</span>').appendTo(this);
 	});
 
 	element.hover(function() {
-		$('.out',  this).stop().animate({'top': height}, options.duration); // move down - hide
-		$('.over', this).stop().animate({'top': '0px'},	 options.duration); // move down - show
+		jQuery('.out',  this).stop().animate({'top': height}, options.duration); // move down - hide
+		jQuery('.over', this).stop().animate({'top': '0px'},  options.duration); // move down - show
 	}, function() {
-		$('.out',  this).stop().animate({'top': '0px'},	 options.duration); // move up - show
-		$('.over', this).stop().animate({'top': height}, options.duration); // move up - hide
+		jQuery('.out',  this).stop().animate({'top': '0px'},  options.duration); // move up - show
+		jQuery('.over', this).stop().animate({'top': height}, options.duration); // move up - hide
 	});
 };

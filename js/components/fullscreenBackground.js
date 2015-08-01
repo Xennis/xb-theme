@@ -10,13 +10,13 @@
  *	@return {number} Height in pixel
  */
 var fullscreenBackground = function(element, options) {
-	var element = $(element);
+	var element = jQuery(element);
 
 	// Set bg size
 	var ratio = options.height / options.width;
 	
 	// Get browser window size
-	var browserwidth = $(window).width();
+	var browserwidth = jQuery(window).width();
 		
 	// Scale the image
     element.width(browserwidth);

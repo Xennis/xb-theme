@@ -1,8 +1,7 @@
 {
-  "name": "twotone",
+  "name": "xb-wp-theme",
   "description": "",
   "dependencies": {
-    "jquery": "~2.1.x",
 	"skeleton": "~2.0.x"
   },
   "devDependencies": {}

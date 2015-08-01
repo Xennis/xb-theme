@@ -9,12 +9,12 @@
  *		- {number} offset Offset in pixel
  */
 var scrollTo = function(options) {
-	$('a[href^="#"]').on('click', function(event) {
-		var anchor = $(this).attr('href');
-		var target = $(anchor);
+	jQuery('a[href^="#"]').on('click', function(event) {
+		var anchor = jQuery(this).attr('href');
+		var target = jQuery(anchor);
 		if (target.length) {
 			event.preventDefault();
-			$('html, body').animate({
+			jQuery('html, body').animate({
 				scrollTop: target.offset().top - options.offset
 			}, options.duration, function() {
 				// Update the URL
