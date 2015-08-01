@@ -29,10 +29,9 @@
 	
 	<!-- Begin container -->
 	<div class="container-page">	
-		<div class="page-header">
+		<div class="page-header" id="home">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="scaleImage">		
 			<div class="title">
-				<h1>Photos</h1>
+				<h1><?php !is_front_page() ? the_title() : bloginfo('name'); ?></h1>
 			</div>
 		</div><!-- .page-header -->
-		<section class="light">
