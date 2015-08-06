@@ -8,12 +8,8 @@ define('XB_THEME_NAME', 'xb-wp-theme');
  * Enqueue scripts and styles.
  */
 function xbTheme_scripts() {
-	wp_enqueue_style(XB_THEME_NAME.'-style', get_stylesheet_uri());
-	
-	wp_enqueue_script(XB_THEME_NAME.'-script-aN', get_template_directory_uri().'/js/components/animateNavbar.js', array('jquery'));
-	wp_enqueue_script(XB_THEME_NAME.'-script-sT', get_template_directory_uri().'/js/components/scrollTo.js', array('jquery'));
-	wp_enqueue_script(XB_THEME_NAME.'-script-fB', get_template_directory_uri().'/js/components/fullscreenBackground.js', array('jquery'));
-	wp_enqueue_script(XB_THEME_NAME.'-script', get_template_directory_uri().'/js/main.js', array('jquery'));	
+	wp_enqueue_style(XB_THEME_NAME.'-style', get_template_directory_uri().'/dist/'.XB_THEME_NAME.'.min.css');
+	wp_enqueue_script(XB_THEME_NAME.'-script', get_template_directory_uri().'/dist/'.XB_THEME_NAME.'.js', array('jquery'));	
 }
 add_action('wp_enqueue_scripts', 'xbTheme_scripts');
 

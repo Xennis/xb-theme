@@ -35,8 +35,7 @@ jQuery(document).ready(function(){
 	
 	// Use scrollTo only on the homepage
 	if (isHomepage()) {
-		scrollTo({
-			duration: 1000,
+		jQuery('a[href^="#"]').LightweightScrollTo({
 			offset: 70
 		});		
 	} else {

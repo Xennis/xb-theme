@@ -7,9 +7,17 @@
  * @param {object} options Options
  *		- {number} duration Animation time in milliseconds
  *		- {number} offset Offset in pixel
+ *		- {boolean}  updateUrl If true, the hash of the URL gets updated
  */
-var scrollTo = function(options) {
-	jQuery('a[href^="#"]').on('click', function(event) {
+jQuery.fn.LightweightScrollTo = function(options) {
+
+	options = jQuery.extend({
+		offset: 0,
+		duration: 1000,
+		updateUrl: true
+	}, options);
+	
+	this.on('click', function(event) {
 		var anchor = jQuery(this).attr('href');
 		var target = jQuery(anchor);
 		if (target.length) {
@@ -17,9 +25,10 @@ var scrollTo = function(options) {
 			jQuery('html, body').animate({
 				scrollTop: target.offset().top - options.offset
 			}, options.duration, function() {
-				// Update the URL
-				window.location.hash = anchor;
+				if (options.updateUrl) {
+					window.location.hash = anchor;					
+				}
 			});
 		}
-	});
+	});	
 };
