@@ -32,6 +32,12 @@
 		<div class="page-header" id="home">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="scaleImage">		
 			<div class="title">
-				<h1><?php !is_front_page() ? the_title() : bloginfo('name'); ?></h1>
+				<h1><?php
+				if (is_front_page()) {
+					bloginfo('name');
+				} else {
+					global $category;
+					echo $category;
+				} ?></h1>
 			</div>
 		</div><!-- .page-header -->

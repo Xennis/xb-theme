@@ -8,5 +8,3 @@ module.exports = function(tasks) {
  
     return gulp;
 };
-
-gulp.task('default', ['watch']);

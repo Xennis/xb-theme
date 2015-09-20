@@ -11,7 +11,7 @@ gulp.task('styles', function () {
             }))
         .on('error', handleError)
 		.pipe($.rename({
-			  suffix: '.min'
+			suffix: '.min'
 		}))
 		.pipe($.minifyCss())
         .pipe(gulp.dest(config.dest))
