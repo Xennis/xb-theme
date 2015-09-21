@@ -31,6 +31,13 @@ function xbTheme_setup() {
 	));
 
 	add_theme_support('title-tag');
+	
+	/*
+	 * This theme uses a custom image size for featured images, displayed on
+	 * "standard" posts and pages.
+	 */
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 604, 270, true );
 }
 endif; // xbTheme_setup
 add_action('after_setup_theme', 'xbTheme_setup');

@@ -1,4 +1,14 @@
 <?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme and one of the
+ * two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * For example, it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ */
 $category = 'Blog';
 get_header();
 
@@ -7,27 +17,13 @@ if (have_posts()) :
 	while (have_posts()) : the_post(); ?>
 
 	<section class="<?php echo ($counter++ % 2 == 0 ? 'light' : 'dark');?>">
-		<article>
-			<h1><?php the_title() ?></h1>
-			<?php the_content(); ?>
-			<div class="post-info">
-				<?php the_date('l, jS F Y'); ?>
-				<?php
-				if (get_the_date('c') != get_the_modified_date('c')) {
-					echo '(updated: '.get_the_modified_date('j.n').')';
-				}
-				?>
-				<div class="tags"><?php the_tags('Tags: ', ', ', ''); ?></div>
-				<div class="category">Category: <?php the_category(' &gt; ', 'multiple'); ?></div>
-			</div><!-- .post-info -->
-		</article>
+		<?php get_template_part( 'content', get_post_format() ); ?>
 	</section>
 
 	<?php endwhile;
 	
 else:
-	get_template_part('content', 'none');
-
+	get_template_part( 'content', 'none' );
 endif;
 
 get_footer();

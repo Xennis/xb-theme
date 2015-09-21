@@ -21,11 +21,11 @@
 
 <body <?php body_class(); ?>>
 	
-	<header>
+	<header class="site-header">
 		<?php wp_nav_menu(array(
 				'theme_location' => 'primary'
 		)); ?>
-	</header>
+	</header><!-- .site-header -->
 	
 	<!-- Begin container -->
 	<div class="container-page">	
