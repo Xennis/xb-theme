@@ -26,6 +26,6 @@ var handleError = function (err) {
         title: err.plugin+' error',
         message: path.basename(err.filename)+" on line "+err.line+":"+err.column,
         sound: false
-      })(err);
-      this.emit('end');
+	})(err);
+	this.emit('end');
 };

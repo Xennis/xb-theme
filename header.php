@@ -37,7 +37,11 @@
 					bloginfo('name');
 				} else {
 					global $category;
-					echo $category;
+					if (isset($category)) {
+						echo $category;			
+					} else {
+						bloginfo('name');
+					}
 				} ?></h1>
 			</div>
 		</div><!-- .page-header -->

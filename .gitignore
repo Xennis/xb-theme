@@ -3,7 +3,7 @@
 ###########
 
 # Compiled
-css/
+dist/
 
 # Node and Bower directories
 node_modules/

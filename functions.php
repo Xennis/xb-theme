@@ -44,14 +44,14 @@ function xbTheme_add_shortcode_recent_post() {
 	$returnString = '';
 	foreach( $recent_posts as $recent ){
 		$returnString .= '<h4>'.$recent['post_title'].'</h4>';
-		$returnString .= '<p><a href="'.get_permalink($recent['ID']).'">'.wp_trim_words($recent['post_content'], 60, ' ... read more!').'</a>';
+		$returnString .= '<p>'.wp_trim_words($recent['post_content'], 60, ' ... <a href="'.get_permalink($recent['ID']).'">read more</a>!</p>');
 		$date = date_create($recent['post_date']);
-		$returnString .= '<div class="postDate">'.date_format($date, 'l, jS F Y');
+		$returnString .= '<div class="post-info preview"><p>'.date_format($date, 'l, jS F Y');
 		if ($recent['post_modified'] != $recent['post_date']) {
 			$date = date_create($recent['post_modified']);
 			$returnString .= ' (updated: '.date_format($date, 'j.n').')'; 
 		}
-		$returnString .= '</div><!-- .postDate --></p>';
+		$returnString .= '</p></div><!-- .postDate -->';
 	}	
 	return $returnString;
 }
