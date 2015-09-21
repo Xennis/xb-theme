@@ -2,7 +2,6 @@
 /**
  * The template for displaying all single posts
  */
-$category = 'Blog';
 get_header();
 while (have_posts()) : the_post(); ?>
 

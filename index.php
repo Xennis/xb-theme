@@ -9,7 +9,6 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
-$category = 'Blog';
 get_header();
 
 $counter = 0;

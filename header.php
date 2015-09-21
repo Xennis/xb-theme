@@ -8,7 +8,7 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
 	<!-- Title -->
-	<title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 	<!-- Link -->
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
@@ -32,16 +32,6 @@
 		<div class="page-header" id="home">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="scaleImage">		
 			<div class="title">
-				<h1><?php
-				if (is_front_page()) {
-					bloginfo('name');
-				} else {
-					global $category;
-					if (isset($category)) {
-						echo $category;			
-					} else {
-						bloginfo('name');
-					}
-				} ?></h1>
+				<h1><?php bloginfo('name'); ?></h1>
 			</div>
 		</div><!-- .page-header -->
