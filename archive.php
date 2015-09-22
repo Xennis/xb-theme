@@ -27,12 +27,8 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php
-			// Start the Loop.
 			while ( have_posts() ) : the_post();
-
 				get_template_part( 'content', get_post_format() );
-
-			// End the loop.
 			endwhile;
 
 			// Previous/next page navigation.

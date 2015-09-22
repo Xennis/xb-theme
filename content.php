@@ -24,8 +24,12 @@
 	
 	<div class="entry-content">
 		<?php
-			the_content();
-		
+			if ( is_single() ) :
+				the_content();
+			else:
+				the_excerpt();
+			endif;
+			
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', XB_THEME_NAME ) . '</span>',
 				'after'       => '</div>',
