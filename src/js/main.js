@@ -11,12 +11,12 @@ jQuery(document).ready(function(){
 	};
 
 	var resizeBackground = function() {
-		var height = fullscreenBackground('.scaleImage', {
+		var height = fullscreenBackground('.blog-image', {
 			width: 2048,
 			height: 1018
 		});
 		// For homepage only
-		jQuery('body.home .page-header').height(height);
+		jQuery('body.home .site-branding').height(height);
 	};
 		
 	jQuery(window).on('resize', function(){
@@ -28,7 +28,7 @@ jQuery(document).ready(function(){
 	//	console.log(window.location.hash)
 	//});
 	
-	animatedNavbar('header .menu-primary-menu-container li a', {
+	animatedNavbar('.site-header nav li a', {
 		duration: 200,
 		height: 60
 	});
@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
 	} else {
 		// Rewrite anchors in the navbar, so they are links to the homepage
 		jQuery('a[href^="#"]').attr('href', function(index, value) {
-				return '/' + value;
+			return '/' + value;
 		});
 	}
 });

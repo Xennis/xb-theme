@@ -1,51 +1,18 @@
-.container-page {
-	padding-top: @navbar-height + @navbar-border-height;
-}
 
-.page-header {
-
-	.scaleImage {
-		position: absolute;
-		z-index: -1;	
-	}
-	
-	.title {
-		@media (max-width: (@screen-normal - 1)) {
-			padding-top: 55px;	
-		}
-		@media (min-width: @screen-normal) {
-			padding-top: 110px;
-		}
-		text-align: center;
-	}
-	
-	h1 {
-		display: inline-block;
-		color: @color-main-light;
-		border-top: 1px solid @color-main-light;
-		border-bottom: 1px solid @color-main-light;
-		text-transform: uppercase;
-		font-weight: 400;
-		@media (max-width: (@screen-normal - 1)) {
-			font-size: 40px;	
-		}
-		@media (min-width: @screen-normal) {
-			font-size: 70px;
-		}
-	}
-}
-
-section.light {
+.site-content {
 	background: url('@{images}/patter_light.png');
 	color: @color-grey;
 }
 
+.article-footer,
 section.dark {
 	background: url('@{images}/patter_dark.png');
 	color: @color-grey-dark;
 }
 
-article {
+article,
+.comments-area,
+.post-navigation {
 	max-width: @article-max-width;
 	margin: auto;
 	padding: 70px 20px 40px 20px;

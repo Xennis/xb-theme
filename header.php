@@ -4,11 +4,8 @@
 
 	<!-- Meta -->
 	<meta charset="<?php bloginfo('charset'); ?>"
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
-
-	<!-- Title -->
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 	<!-- Link -->
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
@@ -20,18 +17,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 	<header class="site-header">
-		<?php wp_nav_menu(array(
+		<nav>
+			<?php wp_nav_menu(array(
+				'menu_class' => 'nav-menu',
 				'theme_location' => 'primary'
-		)); ?>
-	</header><!-- .site-header -->
-	
-	<!-- Begin container -->
-	<div class="container-page">	
-		<div class="page-header" id="home">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="scaleImage">		
-			<div class="title">
+			) ); ?>
+		</nav>
+		<div class="site-branding">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="blog-image">		
+			<div class="blog-title">
 				<h1><?php bloginfo('name'); ?></h1>
 			</div>
-		</div><!-- .page-header -->
+		</div>
+	</header><!-- .site-header -->
+
+	<div id="content" class="site-content">

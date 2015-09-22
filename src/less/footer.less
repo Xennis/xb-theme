@@ -1,6 +1,6 @@
 .site-footer {
 	padding: 10px 20px;
-	font-size: 13px;
+	font-size: @footer-font-size;
 	color: gray;
 	background: @color-main-dark;
 
@@ -8,8 +8,8 @@
 		color: @color-main-light;
 	}
 	
-	@media (max-width: (@screen-normal - 1)) {
-		.screen-small-hide {
+	.screen-small-hide {
+		@media (max-width: (@screen-normal - 1)) {
 			display: none;
 		}
 	}

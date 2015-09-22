@@ -11,6 +11,9 @@
 @article-max-width: 800px;
 @navbar-height: 60px;
 @navbar-border-height: 10px;
+@navbar-item-width: 125px;
+
+@footer-font-size: 13px;
 
 @import '@{bower}/skeleton/css/normalize.css';
 @import '@{bower}/skeleton/css/skeleton.css';
@@ -19,7 +22,6 @@
 @import 'footer';
 @import 'page/common';
 @import 'page/home';
-@import 'page/page';
 @import 'page/post';
 
 /* --------------------- Defaults ------------------------------------------- */
@@ -37,11 +39,12 @@ a {
 	text-decoration: none;
 }
 
-ul.menu {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-
+nav {
+	ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
 	li {
 		float: left;
 		margin: 0px;

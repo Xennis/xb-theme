@@ -1,21 +1,25 @@
-@navbar-item-width: 125px;
-
 .site-header {
-	position: fixed;
-	z-index: 9998;
-	width: 100%;
-	border-bottom: @navbar-border-height solid @color-main-light;
-	background: @color-main-dark;
- 
-	.menu-primary-menu-container {
-		height: @navbar-height;
-		text-align: center;
-		padding: 0px 10px;
+	
+	/**
+     * 1.0 Navigation bar
+     */
+	nav {
+		position: fixed;
+		z-index: 9998;
+		width: 100%;
+		border-bottom: @navbar-border-height solid @color-main-light;
+		background: @color-main-dark;	
+		
+		.menu-primary-menu-container {
+			height: @navbar-height;
+			text-align: center;
+			padding: 0px 10px;
 
-		@media (min-width: @screen-normal) and (max-width: @screen-large) {
-			float: right;			
+			@media (min-width: @screen-normal) and (max-width: @screen-large) {
+				float: right;			
+			}
 		}
-
+		
 		ul {
 			display: inline-block;				
 		}
@@ -70,5 +74,48 @@
 				}			
 			}
 		}
+	}
+	
+	/**
+	 * 2.0 Site branding (blog name, image)
+	 */
+	.site-branding {
+		padding-top: @navbar-height + @navbar-border-height;
+		@media (max-width: (@screen-normal - 1)) {
+			height: @navbar-height + @navbar-border-height + 150px;
+		}
+		@media (min-width: @screen-normal) {
+			height: @navbar-height + @navbar-border-height + 250px;
+		}		
+		
+		.blog-image {
+			position: absolute;
+			z-index: -1;
+		}
+
+		.blog-title {
+			text-align: center;
+			@media (max-width: (@screen-normal - 1)) {
+				padding-top: 55px;	
+			}
+			@media (min-width: @screen-normal) {
+				padding-top: 110px;
+			}
+		}
+
+		h1 {
+			display: inline-block;
+			color: @color-main-light;
+			border-top: 1px solid @color-main-light;
+			border-bottom: 1px solid @color-main-light;
+			text-transform: uppercase;
+			font-weight: 400;
+			@media (max-width: (@screen-normal - 1)) {
+				font-size: 40px;	
+			}
+			@media (min-width: @screen-normal) {
+				font-size: 70px;
+			}
+		}		
 	}
 }
