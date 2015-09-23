@@ -18,7 +18,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header class="site-header">
+	<header class="site-header" <?php echo (is_home() ? 'id="home"' : ''); ?>>
 		<nav>
 			<?php wp_nav_menu(array(
 				'menu_class' => 'nav-menu',
