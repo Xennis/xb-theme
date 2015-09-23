@@ -37,31 +37,10 @@ function xbTheme_setup() {
 	 * "standard" posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 604, 270, true );
+	//set_post_thumbnail_size( 604, 270, true );
 }
 endif; // xbTheme_setup
 add_action('after_setup_theme', 'xbTheme_setup');
-
-add_shortcode('xbTheme_recent_post', 'xbTheme_add_shortcode_recent_post');
-function xbTheme_add_shortcode_recent_post() {
-	$args = array(
-		'numberposts' => '5'
-	);
-	$recent_posts = wp_get_recent_posts($args);
-	$returnString = '';
-	foreach( $recent_posts as $recent ){
-		$returnString .= '<h4>'.$recent['post_title'].'</h4>';
-		$returnString .= '<p>'.wp_trim_words($recent['post_content'], 60, ' ... <a href="'.get_permalink($recent['ID']).'">read more</a>!</p>');
-		$date = date_create($recent['post_date']);
-		$returnString .= '<div class="post-info preview"><p>'.date_format($date, 'l, jS F Y');
-		if ($recent['post_modified'] != $recent['post_date']) {
-			$date = date_create($recent['post_modified']);
-			$returnString .= ' (updated: '.date_format($date, 'j.n').')'; 
-		}
-		$returnString .= '</p></div><!-- .postDate -->';
-	}	
-	return $returnString;
-}
 
 /**
  * Register widget areas.

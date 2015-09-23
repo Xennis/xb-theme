@@ -9,20 +9,30 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
-get_header();
+get_header(); ?>
 
-$counter = 0;
+<section id="blog" class="light">
+	<article>
+		<h1>Blog</h1>
+
+<?php
 if (have_posts()) :
-	while (have_posts()) : the_post(); ?>
-
-	<section class="<?php echo ($counter++ % 2 == 0 ? 'light' : 'dark');?>">
-		<?php get_template_part( 'content', get_post_format() ); ?>
-	</section>
-
-	<?php endwhile;
+	//dynamic_sidebar( 'sidebar-1' );
+	while (have_posts()) : the_post();
+		get_template_part( 'content', get_post_format() );
+	endwhile;
 	
 else:
 	get_template_part( 'content', 'none' );
 endif;
+?>
+
+	</article>
+</section>
+
+<?php
+$page = get_page('14');
+$content = apply_filters( 'the_content', $page->post_content );
+echo $content;
 
 get_footer();
