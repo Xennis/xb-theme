@@ -78,3 +78,9 @@ function xbTheme_widgets_init() {
 	) );
 }
 add_action('widgets_init', 'xbTheme_widgets_init');
+
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/src/php/template-tags.php';
