@@ -1,22 +1,26 @@
-
 .site-content {
-	background: url('@{images}/patter_light.png');
-	color: @color-grey;
+	.site-main-content,
+	.site-main-meta {
+		max-width: @article-max-width;
+		margin: auto;
+		padding: 70px 20px 40px 20px;
+		text-align: justify;			
+	}
+	
+	h1 {
+		text-align: center;		
+	}
 }
 
+section.light {
+	background: url('@{images}/patter_light.png');
+	color: @color-grey;		
+}
+	
 section.dark {
 	background: url('@{images}/patter_dark.png');
 	color: @color-grey-dark;
 }
-
-article,
-.article-footer-area {
-	max-width: @article-max-width;
-	margin: auto;
-	padding: 70px 20px 40px 20px;
-	text-align: justify;
-}
-
 
 
 
@@ -26,11 +30,6 @@ article,
 
 
 article {
-	
-	.page-title,
-	.entry-title {
-		text-align: center;
-	}
 	
 	.entry-footer {
 		font-size: 13px;

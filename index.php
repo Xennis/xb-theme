@@ -11,11 +11,9 @@
  */
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<section id="blog" class="light">
-				<article>
-					<h1>Blog</h1>
+	<section id="blog" class="light">
+		<div class="site-main-content">
+			<h1>Blog</h1>
 
 		<?php if (have_posts()) :
 			//dynamic_sidebar( 'sidebar-1' );
@@ -28,15 +26,11 @@ get_header(); ?>
 		endif;
 		?>
 
-				</article>
-			</section>
+		</div><!-- .site-main-content" -->
+	</section>
 
 <?php
 $page = get_page('14');
-$content = apply_filters( 'the_content', $page->post_content );
-echo $content;
-?>
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+echo apply_filters( 'the_content', $page->post_content );
 
-get_footer();
+get_footer(); ?>
