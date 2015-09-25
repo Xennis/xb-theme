@@ -26,8 +26,8 @@
 		</nav>
 		<div class="site-branding">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/background/large.jpg" alt="" class="blog-image">		
-			<div class="blog-title">
-				<h1><?php bloginfo('name'); ?></h1>
+			<div class="site-title-area">
+				<span class="site-title"><?php bloginfo('name'); ?></span>
 			</div>
 		</div>
 	</header><!-- .site-header -->

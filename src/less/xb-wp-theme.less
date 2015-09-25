@@ -7,6 +7,7 @@
 @color-main-dark: black;
 @color-main-light: white;
 @color-main-highlight: #1EAEDB;
+@color-secondary-subsidiary: gray;
 
 @article-max-width: 800px;
 @navbar-height: 60px;
@@ -18,11 +19,12 @@
 @import '@{bower}/skeleton/css/normalize.css';
 @import '@{bower}/skeleton/css/skeleton.css';
 
-@import 'header';
-@import 'footer';
-@import 'page/common';
-@import 'page/home';
-@import 'page/post';
+@import 'general/wordpress';
+@import 'general/common';
+@import 'general/header';
+@import 'general/footer';
+@import 'post/common';
+@import 'post/page-home';
 
 /* --------------------- Defaults ------------------------------------------- */
 html,
@@ -49,8 +51,4 @@ nav {
 		float: left;
 		margin: 0px;
 	}
-}
-
-ul {
-	padding-left: 20px;
 }

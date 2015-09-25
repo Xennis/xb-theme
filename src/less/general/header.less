@@ -10,18 +10,15 @@
 		border-bottom: @navbar-border-height solid @color-main-light;
 		background: @color-main-dark;	
 		
-		.menu-primary-menu-container {
+		ul {
 			height: @navbar-height;
-			text-align: center;
 			padding: 0px 10px;
+			display: inline-block;				
+			text-align: center;
 
 			@media (min-width: @screen-normal) and (max-width: @screen-large) {
 				float: right;			
 			}
-		}
-		
-		ul {
-			display: inline-block;				
 		}
 
 		li {
@@ -93,7 +90,7 @@
 			z-index: -1;
 		}
 
-		.blog-title {
+		.site-title-area {
 			text-align: center;
 			@media (max-width: (@screen-normal - 1)) {
 				padding-top: 55px;	
@@ -101,21 +98,22 @@
 			@media (min-width: @screen-normal) {
 				padding-top: 110px;
 			}
-		}
-
-		h1 {
-			display: inline-block;
-			color: @color-main-light;
-			border-top: 1px solid @color-main-light;
-			border-bottom: 1px solid @color-main-light;
-			text-transform: uppercase;
-			font-weight: 400;
-			@media (max-width: (@screen-normal - 1)) {
-				font-size: 40px;	
+			
+			.site-title {
+				display: inline-block;
+				line-height: normal;
+				color: @color-main-light;
+				border-top: 1px solid @color-main-light;
+				border-bottom: 1px solid @color-main-light;
+				text-transform: uppercase;
+				font-weight: 400;
+				@media (max-width: (@screen-normal - 1)) {
+					font-size: 40px;	
+				}
+				@media (min-width: @screen-normal) {
+					font-size: 70px;
+				}
 			}
-			@media (min-width: @screen-normal) {
-				font-size: 70px;
-			}
-		}		
+		}	
 	}
 }
