@@ -4,11 +4,14 @@
  */
 get_header(); ?>
 
-	<?php
-	while (have_posts()) : the_post();
-		get_template_part( 'content', get_post_format() ); ?>
-		<section class="dark">
-			<div class="article-footer-area">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			
+		<?php
+		while (have_posts()) : the_post();
+			get_template_part( 'content', get_post_format() ); ?>
+			<section class="dark">
+				<div class="article-footer-area">
 				<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -26,7 +29,10 @@ get_header(); ?>
 				</div><!-- .article-footer-area -->
 			</section><!-- .dark -->
 		<?php
-	endwhile;
-	?>
+		endwhile;
+		?>
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

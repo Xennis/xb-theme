@@ -11,28 +11,32 @@
  */
 get_header(); ?>
 
-<section id="blog" class="light">
-	<article>
-		<h1>Blog</h1>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			<section id="blog" class="light">
+				<article>
+					<h1>Blog</h1>
 
-<?php
-if (have_posts()) :
-	//dynamic_sidebar( 'sidebar-1' );
-	while (have_posts()) : the_post();
-		get_template_part( 'content', get_post_format() );
-	endwhile;
+		<?php if (have_posts()) :
+			//dynamic_sidebar( 'sidebar-1' );
+			while (have_posts()) : the_post();
+				get_template_part( 'content', get_post_format() );
+			endwhile;
 	
-else:
-	get_template_part( 'content', 'none' );
-endif;
-?>
+		else:
+			get_template_part( 'content', 'none' );
+		endif;
+		?>
 
-	</article>
-</section>
+				</article>
+			</section>
 
 <?php
 $page = get_page('14');
 $content = apply_filters( 'the_content', $page->post_content );
 echo $content;
+?>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
 
 get_footer();
