@@ -13,7 +13,7 @@
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+				the_title( sprintf( '<h5 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h5>' );
 			endif;
 		?>
 	</header><!-- .entry-header -->
@@ -43,7 +43,7 @@
 				) );		
 			?>
 			</div><!-- .entry-content -->
-			<footer class="entry-footer post-info">
+			<footer class="entry-footer">
 				<?php //twentyfifteen_entry_meta(); ?>
 				<?php the_date(); ?>
 				<?php

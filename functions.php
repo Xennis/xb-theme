@@ -18,7 +18,7 @@ define('XB_THEME_NAME', 'xb-wp-theme');
  * @since Twenty Fifteen 1.0
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 800;
+	$content_width = 850;
 }
 
 if (!function_exists('xbTheme_setup')) :

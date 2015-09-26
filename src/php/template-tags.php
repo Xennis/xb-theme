@@ -102,7 +102,10 @@ function xbTheme_post_thumbnail() {
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 		<?php
-			the_post_thumbnail( array(180,180), array( 'alt' => get_the_title() ) );
+			the_post_thumbnail( array(195,195), array(
+				'class' => 'u-max-full-width', // TODO: used?
+				'alt' => get_the_title()
+			) );
 		?>
 	</a>
 
