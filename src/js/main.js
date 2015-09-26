@@ -11,12 +11,11 @@ jQuery(document).ready(function(){
 	};
 
 	var resizeBackground = function() {
-		var height = fullscreenBackground('.blog-image', {
+		// For homepage only
+		fullscreenBackground('body.home .site-branding', {
 			width: 2048,
 			height: 1018
 		});
-		// For homepage only
-		jQuery('body.home .site-branding').height(height);
 	};
 		
 	jQuery(window).on('resize', function(){

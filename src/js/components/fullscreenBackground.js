@@ -11,16 +11,16 @@
  */
 var fullscreenBackground = function(element, options) {
 	var element = jQuery(element);
-
-	// Set bg size
-	var ratio = options.height / options.width;
 	
-	// Get browser window size
-	var browserwidth = jQuery(window).width();
-		
-	// Scale the image
-    element.width(browserwidth);
-    element.height( Math.round(browserwidth * ratio) );
+	if (element.length > 0) {
+		// Set bg size
+		var ratio = options.height / options.width;
 
-	return element.height();
+		// Scale the image
+		var newWidth = Math.round(jQuery(window).width() * ratio);
+		var newWidthOffset = element.css('padding-top').replace("px", "");
+		element.height(newWidth - newWidthOffset);
+
+		//return element.height()		
+	}
 };
