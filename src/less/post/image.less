@@ -1,8 +1,11 @@
 .attachment {
-	.updated {
-		display: none;
+
+	.entry-content {
+		.entry-caption {
+			display: none;
+		}
 	}
-	
+
 	.entry-footer {
 		margin-top: 10px;
 		margin-bottom: 25px;
@@ -14,10 +17,13 @@
 		a:hover {
 			color: @color-main-highlight;
 		}
-	}
-	
-	.posted-on,
-	.full-size-link {
-		margin-right: 12px;
+		
+		.updated { // date: image update
+			display: none;
+		}	
+		
+		span {
+			margin-right: 12px;
+		}
 	}
 }

@@ -80,7 +80,7 @@ function xbTheme_entry_meta() {
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><i class="fa fa-commenting"></i> ';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', XB_THEME_NAME ), get_the_title() ) );
 		echo '</span>';

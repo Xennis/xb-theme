@@ -71,7 +71,7 @@ function xbTheme_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	//add_editor_style( array( 'css/editor-style.css', xbTheme_fonts_url() ) );	
+	add_editor_style( array( get_template_directory_uri().'/dist/'.XB_THEME_NAME.'.min.css', xbTheme_fonts_url() ) );	
 }
 endif; // xbTheme_setup
 add_action( 'after_setup_theme', 'xbTheme_setup' );

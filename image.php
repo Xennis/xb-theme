@@ -12,7 +12,7 @@ get_header();
 
 				<nav id="image-navigation" class="navigation image-navigation">
 					<div class="nav-links">
-						<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', XB_THEME_NAME ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', XB_THEME_NAME ) ); ?></div>
+						<div class="nav-previous"><?php //previous_image_link( false, __( 'Previous Image', XB_THEME_NAME ) ); ?></div><div class="nav-next"><?php //next_image_link( false, __( 'Next Image', XB_THEME_NAME ) ); ?></div>
 					</div><!-- .nav-links -->
 				</nav><!-- .image-navigation -->
 
@@ -42,7 +42,7 @@ get_header();
 					</div><!-- .entry-attachment -->
 
 					<?php
-						the_content();
+						//the_content();
 						wp_link_pages( array(
 							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
 							'after'       => '</div>',
