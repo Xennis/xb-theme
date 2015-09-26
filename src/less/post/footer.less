@@ -1,13 +1,41 @@
-.article-footer-area {
+.site-main-meta {
+	/*
+     * Comments
+     */
 	#respond {
 		input[type="submit"] {
 			color: rgb(153, 153, 153);
 		}
 	}
-	
-	nav.post-navigation {
-		h2 {
-			font-size:  3.6rem;
-		}
-	}	
 }
+
+	/*
+	 * Post navigation
+	 */
+	.post-navigation {
+		
+		a {
+			color: @color-main-light;
+		}
+		a:hover {
+			text-decoration: none;
+			background: @color-main-highlight;			
+		}
+		
+		.nav-previous,
+		.nav-next {
+			padding: 20px 75px;
+			background-color: @color-main-highlight;
+			background-position: 50% 50%;
+			background-size: cover;
+			
+			.meta-nav {
+				text-transform: uppercase;
+				font-size: 11px;
+				display: block;
+			}
+			.post-title {
+				font-size: 20px;
+			}
+		}
+	}

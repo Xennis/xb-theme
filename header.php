@@ -17,6 +17,8 @@
 
 <body <?php body_class(); ?>>
 
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', XB_THEME_NAME ); ?></a>
+
 	<header class="site-header" <?php echo (is_home() ? 'id="home"' : ''); ?>>
 		<nav>
 			<?php wp_nav_menu(array(

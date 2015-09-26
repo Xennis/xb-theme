@@ -8,6 +8,17 @@ get_header();
 	<section class="light">
 		<div class="site-main-content">
 			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php
+				// Previous/next post navigation.
+				the_post_navigation( array(
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+				) );
+			?>
 		</div><!-- .site-main-content -->
 	</section><!-- .light-->
 	<section class="dark">
@@ -17,14 +28,6 @@ get_header();
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
-
-				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next post:', XB_THEME_NAME ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous post:', XB_THEME_NAME ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-				) );
 			?>
 		</div><!-- .site-main-meta -->
 	</section><!-- .dark -->

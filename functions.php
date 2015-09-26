@@ -120,6 +120,43 @@ function xbTheme_scripts() {
 add_action('wp_enqueue_scripts', 'xbTheme_scripts');
 
 /**
+ * Add featured image as background image to post navigation elements.
+ *
+ * @see wp_add_inline_style()
+ */
+function xbTheme_post_nav_background() {
+	if ( ! is_single() ) {
+		return;
+	}
+
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+	$css      = '';
+
+	if ( is_attachment() && 'attachment' == $previous->post_type ) {
+		return;
+	}
+
+	if ( $previous &&  has_post_thumbnail( $previous->ID ) ) {
+		$prevthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $previous->ID ), 'post-thumbnail' );
+		$css .= '
+			.post-navigation .nav-previous { background-image: url(' . esc_url( $prevthumb[0] ) . '); }
+		';
+	}
+
+	if ( $next && has_post_thumbnail( $next->ID ) ) {
+		$nextthumb = wp_get_attachment_image_src( get_post_thumbnail_id( $next->ID ), 'post-thumbnail' );
+		$css .= '
+			.post-navigation .nav-next { background-image: url(' . esc_url( $nextthumb[0] ) . '); }
+		';
+	}
+
+	wp_add_inline_style( XB_THEME_NAME.'-style', $css );
+}
+add_action( 'wp_enqueue_scripts', 'xbTheme_post_nav_background' );
+
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/src/php/template-tags.php';
