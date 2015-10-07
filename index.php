@@ -13,9 +13,10 @@ get_header(); ?>
 
 	<section id="blog" class="light">
 		<div class="site-main-content">
-			<h1>Blog</h1>
-
 		<?php if (have_posts()) :
+			?>
+			<h1>Blog</h1>
+			<?php
 			//dynamic_sidebar( 'sidebar-1' );
 			while (have_posts()) : the_post();
 				get_template_part( 'content', get_post_format() );
