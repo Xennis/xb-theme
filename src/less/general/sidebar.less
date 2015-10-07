@@ -1,0 +1,39 @@
+#sidebar {
+	width: 100%;
+	display: inline-block;
+	
+	.widget {
+		float: left;
+		padding-right: 25px;
+		border-left: 1px solid @color-main-highlight;
+		
+		@media (max-width: (@screen-normal - 1)) {
+			display: none;
+		}
+		
+		.widget-title {
+			background-color: @color-main-highlight;
+			color: @color-main-light;
+			font-size: 16px;
+		}
+		
+		ul {
+			list-style: none;
+			
+			li {
+				a {
+					padding-right: 5px;
+				}
+			}
+		}
+		
+		a {
+			padding-left: 2px;
+		}
+		a:hover {
+			text-decoration: none;
+			background-color: @color-main-highlight;
+			color: @color-main-light;
+		}
+	}
+}

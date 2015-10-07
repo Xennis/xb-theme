@@ -16,6 +16,12 @@ get_header(); ?>
 		<?php if (have_posts()) :
 			?>
 			<h1>Blog</h1>
+			<div id="sidebar">
+				<?php dynamic_sidebar( 'sidebar-blog' ); ?>
+			</div>
+			<div
+			sadsdad	
+		</div>
 			<?php
 			//dynamic_sidebar( 'sidebar-1' );
 			while (have_posts()) : the_post();

@@ -83,9 +83,9 @@ add_action( 'after_setup_theme', 'xbTheme_setup' );
  */
 function xbTheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Main Widget Area', XB_THEME_NAME ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Appears in the footer section of the site.', XB_THEME_NAME ),
+		'name'          => __( 'Blog Widget Area', XB_THEME_NAME ),
+		'id'            => 'sidebar-blog',
+		'description'   => __( 'Appears in the blog section of the site.', XB_THEME_NAME ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
