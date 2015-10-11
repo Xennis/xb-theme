@@ -2,7 +2,8 @@
   "name": "xb-wp-theme",
   "description": "",
   "dependencies": {
-	"skeleton": "~2.0.x"
+	"skeleton": "~2.0.x",
+	"font-awesome": "~4.4.x"
   },
   "devDependencies": {}
 }
