@@ -9,7 +9,7 @@ module.exports = {
 		url: 'http://example.org'
 	},
 	styles: {
-		src: 'src/less/xb-wp-theme.less',
+		src: 'src/less/*.less',
 		dest: 'dist/'
 	},
 	watch: {

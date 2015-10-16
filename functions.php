@@ -111,9 +111,10 @@ function xbTheme_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( XB_THEME_NAME.'-fonts', xbTheme_fonts_url() );
 	
-	// Load main stylesheet.
+	// Load main and print stylesheet.
 	wp_enqueue_style(XB_THEME_NAME.'-style', get_template_directory_uri().'/dist/'.XB_THEME_NAME.'.min.css');
-	
+	wp_enqueue_style(XB_THEME_NAME.'-print', get_template_directory_uri().'/dist/'.XB_THEME_NAME.'-print.min.css', null, false, 'print');
+
 	// Load main script.
 	wp_enqueue_script(XB_THEME_NAME.'-script', get_template_directory_uri().'/dist/'.XB_THEME_NAME.'.js', array( 'jquery' ));	
 }
