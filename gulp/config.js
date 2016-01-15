@@ -10,7 +10,7 @@ module.exports = {
 	},
 	styles: {
 		src: 'src/less/*.less',
-		dest: 'dist/'
+		dest: 'dist/style/'
 	},
 	watch: {
 		scripts: 'src/js/**/*.js',
