@@ -1,5 +1,7 @@
 # WordPress Theme xb-wp-theme
 
+[![Build Status](https://travis-ci.org/Xennis/xb-wp-theme.svg?branch=master)](https://travis-ci.org/Xennis/xb-wp-theme)
+
 WordPress theme build with [jQuery](https://jquery.com/) as JavaScript library
 and [Skeleton](http://getskeleton.com/) as responsive CSS boilerplate.
 
