@@ -9,7 +9,6 @@ and [Skeleton](http://getskeleton.com/) as responsive CSS boilerplate.
 
 Install requirements
 * `npm install`
-* `./node_modules/bower/bin/bower install`
 
 Run
 * `./node_modules/gulp/bin/gulp.js`

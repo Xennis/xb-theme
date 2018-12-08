@@ -9,13 +9,13 @@ var config = require('../config').serve,
 gulp.task('serve', function() {
 	var proxyOptions = url.parse(config.url);
 	
-    browserSync({
+	browserSync({
 		open: true,
-        port: 3000,
-        server: {
-            baseDir: "./",
-            middleware: [proxy(proxyOptions)]
-        }
-    }, function (err, bs) {
-    });
+		port: 3000,
+		server: {
+			baseDir: "./",
+			middleware: [proxy(proxyOptions)]
+		}
+	}, function (err, bs) {
+	});
 });
