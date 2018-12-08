@@ -1,4 +1,4 @@
-# WordPress theme xb-wp-theme
+# WordPress Theme xb-wp-theme
 
 WordPress theme build with [jQuery](https://jquery.com/) as JavaScript library
 and [Skeleton](http://getskeleton.com/) as responsive CSS boilerplate.
@@ -7,10 +7,10 @@ and [Skeleton](http://getskeleton.com/) as responsive CSS boilerplate.
 
 Install requirements
 * `npm install`
-* `bower install`
+* `./node_modules/bower/bin/bower install`
 
 Run
-* `gulp`
+* `./node_modules/gulp/bin/gulp.js`
 
 ### Credits
 

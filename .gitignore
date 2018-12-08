@@ -5,13 +5,7 @@
 # Compiled
 dist/
 
-# Node and Bower directories
+# Node and Bower
 node_modules/
+package-lock.json
 bower_components/
-
-###########
-# IDE
-###########
-
-# Netbeans
-nbproject/
