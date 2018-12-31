@@ -5,6 +5,8 @@
 WordPress theme build with [jQuery](https://jquery.com/) as JavaScript library
 and [Skeleton](http://getskeleton.com/) as responsive CSS boilerplate.
 
+![Desktop](screenshot.png)
+
 ### Setup
 
 Install requirements
