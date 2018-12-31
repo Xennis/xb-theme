@@ -15,6 +15,12 @@ Install requirements
 Run
 * `./node_modules/gulp/bin/gulp.js`
 
+#### Sync required files
+
+```sh
+rsync -r --relative *.md *.php *.png *.css src/php dist images/ <host>:<wordpress-dir>/wp-content/themes/xb-wp-theme/
+```
+
 ### Credits
 
 Inspired by the theme [onetone](https://wordpress.org/themes/onetone/) by MageeWP
